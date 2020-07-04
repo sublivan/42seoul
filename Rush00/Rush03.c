@@ -1,3 +1,4 @@
+
 void ft_putchar(char c);
 
 
@@ -11,7 +12,7 @@ void make_col(int x,char *input){
             ft_putchar(input[1]);
         else
             ft_putchar(input[2]);
-       
+
         col++;
     }
     ft_putchar('\n');
@@ -22,17 +23,19 @@ void make_row(int x, int y){
     int row;
     row = 0;
 
-	char *input = {"oo-|| "};
+    char *input = {"ACBB "};
     while(row < y){
         if(row == 0 || row ==y-1)
             make_col(x,input);
         else
-            make_col(x,&input[3]);
-		row++;
+            make_col(x,&input[2]);
+        row++;
     }
 
 }
 void rush(int x, int y){
-	make_row(x,y);
+    make_row(x,y);
 
 }
+
+

@@ -1,7 +1,8 @@
-//rush02
+//rush04
 
-char ft_putchar(char c);
-void		make_col(int x, char *input)
+void ft_putchar(char c);
+
+void 		make_col(int x, char *input)
 {
 	int col;
 	col = 0;
@@ -17,11 +18,11 @@ void		make_col(int x, char *input)
 		}
 		ft_putchar('\n');
 }
-void		make_row(int x, int y)
+void 		make_row(int x, int y)
 {
 	int row;
 	row = 0;
-	char *input = {"ABAB BCBC"};
+	char *input = {"ABCB BCBA"};
 	while(row < y)
 	{
 		if(row == 0)
@@ -33,7 +34,7 @@ void		make_row(int x, int y)
 		row++;
 	}
 }
-void		rush(int x, int y)
+void 		rush(int x, int y)
 {
 	make_row(x, y);
 }

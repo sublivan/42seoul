@@ -2,7 +2,7 @@ void rush(int x,int y);
 void ft_putchar(char c);
 
 int 		main(){
-	rush(5,5);	
+	rush(5,3);	
 	
 	ft_putchar('\n');
 
@@ -15,6 +15,10 @@ int 		main(){
 	ft_putchar('\n');
 
 	rush(1,5);
+
+	ft_putchar('\n');
+
+	rush(4,4);
 	
 
 }

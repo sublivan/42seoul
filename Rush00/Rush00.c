@@ -1,3 +1,4 @@
+//rush00.c
 void ft_putchar(char c);
 
 
