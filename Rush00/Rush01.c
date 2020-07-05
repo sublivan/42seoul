@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minjkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: minhkim <minhkim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/04 20:44:41 by minjkim           #+#    #+#             */
-/*   Updated: 2020/07/04 21:51:22 by minjkim          ###   ########.fr       */
+/*   Created: 2020/07/05 15:23:38 by minhkim           #+#    #+#             */
+/*   Updated: 2020/07/05 15:23:44 by minhkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@ void		ft_putchar(char c);
 void		make_col(int x, char *input)
 {
 	int col;
+
 	col = 0;
 	while (col < x)
 	{
@@ -29,13 +30,11 @@ void		make_col(int x, char *input)
 	ft_putchar('\n');
 }
 
-void		make_row(int x, int y)
+void		make_row(int x, int y, char *input)
 {
 	int row;
-	row = 0;
 
-	char *input;
-	input = "/\\** \\/*";
+	row = 0;
 	while (row < y)
 	{
 		if (row == 0)
@@ -50,5 +49,5 @@ void		make_row(int x, int y)
 
 void		rush(int x, int y)
 {
-	make_row(x, y);
+	make_row(x, y, "/\\** \\/*");
 }

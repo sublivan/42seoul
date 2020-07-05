@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush00.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minhkim <minhkim@student.42seoul.k>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/05 15:19:30 by minhkim           #+#    #+#             */
+/*   Updated: 2020/07/05 15:19:44 by minhkim          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar(char c);
+void	ft_putchar(char c);
 
-void	print_col(char *data, int x)
+void	make_col(int x, char *input)
 {
 	int col;
 
@@ -9,17 +20,17 @@ void	print_col(char *data, int x)
 	while (col < x)
 	{
 		if (col == 0)
-			ft_putchar(data[0]);
+			ft_putchar(input[0]);
 		else if (col == x - 1)
-			ft_putchar(data[1]);
+			ft_putchar(input[1]);
 		else
-			ft_putchar(data[2]);
+			ft_putchar(input[2]);
 		++col;
 	}
 	ft_putchar('\n');
 }
 
-void	print_row(char *data, int x, int y)
+void	make_row(int x, int y, char *input)
 {
 	int row;
 
@@ -27,17 +38,16 @@ void	print_row(char *data, int x, int y)
 	while (row < y)
 	{
 		if (row == 0)
-			print_col(data, x);
+			make_col(x, input);
 		else if (row == y - 1)
-			print_col(&data[3], x);
+			make_col(x, input);
 		else
-			print_col(&data[6], x);
+			make_col(x, &input[3]);
 		++row;
 	}
 }
 
 void	rush(int x, int y)
 {
-	print_row("oo-oo-|| ", x, y);
+	make_row(x, y, "oo-|| ");
 }
-

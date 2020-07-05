@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minhkim <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: minhkim <minhkim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/04 20:44:19 by minhkim           #+#    #+#             */
-/*   Updated: 2020/07/04 21:40:12 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/05 15:25:09 by minhkim           #+#    #+#             */
+/*   Updated: 2020/07/05 15:25:40 by minhkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_putchar(char c);
+char	ft_putchar(char c);
 
-void		make_col(int x, char *input)
+void	make_col(int x, char *input)
 {
 	int col;
 
@@ -30,14 +30,11 @@ void		make_col(int x, char *input)
 	ft_putchar('\n');
 }
 
-void		make_row(int x, int y)
+void	make_row(int x, int y, char *input)
 {
 	int row;
 
 	row = 0;
-	char *input;
-
-	input = "ABAB BCBC";
 	while (row < y)
 	{
 		if (row == 0)
@@ -50,7 +47,7 @@ void		make_row(int x, int y)
 	}
 }
 
-void		rush(int x, int y)
+void	rush(int x, int y)
 {
-	make_row(x, y);
+	make_row(x, y, "ABAB BCBC");
 }
