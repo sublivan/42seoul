@@ -1,19 +1,19 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/07 19:45:22 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/07 19:45:34 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_is_negative(int n);
-
-void    ft_is_negative(int n)
+void		ft_is_negative(int n)
 {
-    if(n > 0 || n == 0)
-        write(1, "P", 1);
-    else if(n < 0)
-        write(1, "N", 1);
-}
-int     main(void)
-{
-    ft_is_negative(5);
-    write(1, "\n", 1);
-    ft_is_negative(0);
-    write(1, "\n", 1);
-    ft_is_negative(-5);
+	if(n > 0 || n == 0)
+	   	write(1, "P", 1);
+	else if(n < 0)
+	   	write(1, "N", 1);
 }

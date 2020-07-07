@@ -1,6 +1,14 @@
-#include <unistd.h>
-
-void	ft_print_numbers(void);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/07 19:40:49 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/07 19:41:03 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_print_numbers(void)
 {
@@ -12,9 +20,4 @@ void	ft_print_numbers(void)
 		write(1, &num, 1);
 		num++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_numbers();
 }

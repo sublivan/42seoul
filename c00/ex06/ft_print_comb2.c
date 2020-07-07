@@ -1,44 +1,48 @@
-
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb2_2.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/07 20:01:50 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/07 20:01:53 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void    ft_putchar(char c)
 {
     write(1, &c, 1);
 }
 
-void    ft_write(int n1, int n2)
+void    ft_write(int a)
 {
-    ft_putchar(n1 / 10 + 48);
-    ft_putchar(n1 % 10 + 48);
-    ft_putchar(' ');
-    ft_putchar(n2 / 10 + 48);
-    ft_putchar(n2 % 10 + 48);
-    if(n1 + n2 != 98 + 99)
-    {
-        ft_putchar(',');
-        ft_putchar(' ');
-    }
+    ft_putchar(a / 10 + 48);
+    ft_putchar(a % 10 + 48);
 }
 
 void    ft_print_comb2(void)
 {
-    int     a;
-    int     b;
+    int n1;
+    int n2;
 
-    a = 0;
-    while(a <= 99)
+    n1 = 0;
+    while(n1 <= 98)
     {
-        b = a + 1;
-        while(b <= 99)
+        n2 = n1 + 1;
+        while(n2 <= 99)
         {
-            ft_write(a, b);
-            b++;
-        }
-        a++;
-    }
-}
+            ft_write(n1);
+            ft_putchar(' ');
+            ft_write(n2);
 
-int		main(void)
-{
-	ft_print_comb2();
+            if(n1 != 98 || n2 !=99)
+            {
+                ft_putchar(',');
+                ft_putchar(' ');
+            }
+			n2++;
+        }
+		n1++;
+    }
 }
