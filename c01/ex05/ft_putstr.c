@@ -6,9 +6,11 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 15:10:50 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/07 15:11:27 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/07 16:16:18 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
