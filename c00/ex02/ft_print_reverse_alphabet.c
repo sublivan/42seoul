@@ -6,9 +6,11 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 19:39:19 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/07 19:39:39 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/08 13:20:44 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_print_reverse_alphabet(void)
 {
