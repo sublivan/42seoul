@@ -6,7 +6,7 @@
 /*   By: minhkim <minhkim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 15:30:31 by minhkim           #+#    #+#             */
-/*   Updated: 2020/07/08 12:27:04 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/08 16:00:43 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,8 @@ int		main(void)
 	rush(4, 4);
 	ft_putchar('\n');
 	rush(5, -1);
+	ft_putchar('\n');
+	rush(0,0);
+	ft_putchar('\n');
+	rush(-5,1);
 }
