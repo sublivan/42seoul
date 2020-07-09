@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 19:32:01 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/09 19:32:52 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/09 19:35:32 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/09 19:35:50 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
+int		ft_str_is_uppercase(char *str)
 {
-	if ( *str == '\0')
+	int result;
+	int cp;
+	if (*str == '\0')
 		return 1;
 	while (*str != '\0')
 	{
-		char cp;
-
 		cp = *(str++);
-		if ((cp >= 'a' && cp <= 'z') || (cp >= 'A' && cp <= 'Z'))
-		{
-			return (1);
-		}
+		if( cp >= 'A' && cp <= 'z')
+			result = 1;
+		else
+			return 0;
 	}
-	return (0);
+	return result;
 }

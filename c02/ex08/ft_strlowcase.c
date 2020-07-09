@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 19:32:01 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/09 19:32:52 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/09 19:37:06 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/09 19:41:42 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
+char	*ft_strlowcase(char *str)
 {
-	if ( *str == '\0')
-		return 1;
-	while (*str != '\0')
-	{
-		char cp;
+	int index;
+	char c;
 
-		cp = *(str++);
-		if ((cp >= 'a' && cp <= 'z') || (cp >= 'A' && cp <= 'Z'))
-		{
-			return (1);
-		}
+	index = 0;
+	while (str[index] != '\0')
+	{
+		c = *(str + index);
+		if (c >= 'A' && c <= 'Z')
+			str[index] = c + 32;
+		index++;
 	}
-	return (0);
+	return (str);
 }
