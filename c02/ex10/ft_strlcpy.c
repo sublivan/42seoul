@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 19:30:05 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/11 10:54:52 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/11 13:00:53 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/11 13:00:58 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcpy(char *dest, char *src)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	while (*src != '\0')
+	int index;
+
+	index=0;
+	while (index < size)
 	{
-		*dest++ = *src++;
+		dest[index] = src[index];
+		index++;
 	}
-	return dest;
+
 }
 
-int		main(void)
-{
-	char src1[20];
-
-	ft_strcpy(src1, "i love you");
-	printf("%s", src1);
-}
