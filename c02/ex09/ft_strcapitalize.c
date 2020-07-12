@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:57:13 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/11 12:52:55 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/11 21:01:04 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strcapitalize(char *str)
 		{
 			ch_upper(str, index);
 		}
-		else if (c == ' ' || c == '+')
+		else if (c < '0' || c > '9' )
 		{
 			++index;
 			ch_upper(str, index);

@@ -4,7 +4,6 @@ unsigned int  ft_strlcat(char *dest, char *src, unsigned int size)
 {
     unsigned int i;
     unsigned int j;
-	unsigned int n;
 
 	i = 0;
 	j = 0;
@@ -18,31 +17,34 @@ unsigned int  ft_strlcat(char *dest, char *src, unsigned int size)
 		j++;
 	}
 	dest[i + j] = '\0';
-	n = j;
 	while (src[j] != '\0')
 	{
 		j++;
 	}
 	if(size < i )
-		return (n + size);
+		return (j + size);
 	else
 		return (i + j);
 
 }
 
 #include <stdio.h>
+#include <string.h>
 
 int   main(void)
 {
 
 	char s1[] = {"hello"};
 
-	char s2[] = {"good mornig"};
+	char s2[] = {"good"};
 
 	int temp;
 
-	temp = ft_strlcat(s1, s2, 7);
-
+	temp = ft_strlcat(s1, s2, 4);
 	printf("%d", temp);
+
+	//int test;
+	//test = strlcat(s1, s2, 7);
+	//printf("%d", test);
 
 }
