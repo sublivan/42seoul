@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/09 19:30:05 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/11 10:54:52 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/12 22:44:46 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/12 22:46:06 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ char	*ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	*(dest + i) = '\0';
-	
 	return (dest);
 }
 
