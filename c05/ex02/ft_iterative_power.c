@@ -14,10 +14,3 @@ int		ft_iteraitv_power(int nb, int power)
 	}
 	return result;
 }
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d", ft_iteraitv_power(5, 5));
-}

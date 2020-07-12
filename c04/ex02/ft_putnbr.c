@@ -49,8 +49,3 @@ void	ft_putnbr(int nb)
 		index--;
 	print_nums(nums, &index);
 }
-
-int	main(void)
-{
-	ft_putnbr(42);
-}

@@ -14,7 +14,9 @@ int		ft_str_is_lowercase(char *str)
 {
 	int result;
 	int cp;
-
+	
+	if(*str == '\0')
+		return 1;
 	while (*str != '\0')
 	{
 		cp = *(str++);

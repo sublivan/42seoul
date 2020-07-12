@@ -7,13 +7,13 @@ int     main(void)
 	int result;
 
 	result = ft_str_is_printable("ABCDE");
-	printf("%d", result);
-	result = ft_str_is_printable("abc1234");
-	printf("%d",result);
-	result = ft_str_is_printable("1234ABC");
-	printf("%d",result);
-	result = ft_str_is_printable("?1?!!");
-	printf("%d",result);
+	printf("%d \n", result);
+	result = ft_str_is_printable("		");
+	printf("%d \n",result);
+	result = ft_str_is_printable("123	4ABC");
+	printf("%d \n",result);
+	result = ft_str_is_printable("?1? !!");
+	printf("%d \n",result);
 	result = ft_str_is_printable("");
-	printf("%d",result);
+	printf("%d \n",result);
 }

@@ -1,34 +1,29 @@
 char    *ft_strstr(char *str, char *to_find)
 {
 	char *a;
-	char *b;
+	char b;
+	char *result;
+	int i;
+	
+	i = 0;
+	if (*to_find == 0)
+		return (0);
 
-	if(*to_find == 0)
-		return (str);
-    while(*str)
-    {
+	while(*str)
+	{
 		a = str;
-		b = to_find;
-        while(*b && *a == *b)
-        {
-            ++a;
-			++b;
-        }
-        if(*b == '\0')
-			return (str);
+	    while(to_find[i] && *a == to_find[i])
+	    {
+	        ++a;
+			++i;
+	    }
+	    if(to_find[i] == '\0')
+			return (to_find);
+		else
+			i = 0;
 		++str;
-    }
+	}
+
     return (0);
 }
 
-#include <stdio.h>
-
-int     main(void)
-{
-    char s1[] = {"helloworld"};
-    char s2[] = {"world"};
-
-	char *ptr = ft_strstr(s1, s2);
-    printf("%s", ptr);
-    
-}

@@ -4,7 +4,7 @@ char		*ft_strupcase(char *str);
 
 int		main(void)
 {
-	char arr[7]= {"abCDef"};
+	char arr[]= {"abCDef1234"};
 
 	ft_strupcase(arr);
 

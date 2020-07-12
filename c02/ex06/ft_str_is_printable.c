@@ -19,10 +19,12 @@ int		ft_str_is_printable(char *str)
 		return 1;
 	while (*str != '\0')
 	{
+		cp = *str;
 		if (cp >= 33 & cp <= 126)
 			result = 1;
 		else
 			return 0;
+		++str;
 	}
 	return result;
 }

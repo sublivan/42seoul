@@ -4,7 +4,7 @@ char	*ft_strlowcase(char *str);
 
 int     main(void)
 {
-	    char arr[7]= {"abCDef"};
+	    char arr[]= {"124AbCDef123"};
 
 		ft_strlowcase(arr);
 

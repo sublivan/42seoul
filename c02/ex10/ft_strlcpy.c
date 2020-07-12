@@ -20,6 +20,6 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		dest[index] = src[index];
 		index++;
 	}
-
+	dest = '\0';
 }
 
