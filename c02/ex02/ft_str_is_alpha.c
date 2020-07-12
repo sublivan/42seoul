@@ -19,10 +19,24 @@ int		ft_str_is_alpha(char *str)
 		char cp;
 
 		cp = *(str++);
-		if ((cp >= 'a' && cp <= 'z') || (cp >= 'A' && cp <= 'Z'))
+		if (!(cp >= 'a' && cp <= 'z') && !(cp >= 'A' && cp <= 'Z'))
 		{
-			return (1);
+			return (0);
 		}
 	}
-	return (0);
+	return (1);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	char s1[] = "12345avb";
+	char s2[] = "avb";
+	char s3[] = "avb1234";
+	
+	printf("%d", ft_str_is_alpha(s1));
+	printf("%d", ft_str_is_alpha(s2));
+	printf("%d", ft_str_is_alpha(s3));
+	
 }
