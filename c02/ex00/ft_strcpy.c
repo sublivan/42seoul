@@ -28,3 +28,4 @@ int		main(void)
 	ft_strcpy(src1, "i love you");
 	printf("%s", src1);
 }
+
