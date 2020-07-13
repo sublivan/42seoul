@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/11 13:00:53 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/13 16:03:17 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/13 14:12:14 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/13 15:23:18 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int index;
 
 	index = 0;
-	if(size != 0)
+	while (*dest)
 	{
-		while (index < size - 1 && src[index])
-		{
-			dest[index] = src[index];
-			++index;
-		}
-		dest[index] = '\0';
+		++dest;
 	}
-	while (src[index])
+	while (index < nb)
 	{
-		++index;
+		*dest++ = *src++;
+		index++;
 	}
-	return (index);
+	*dest = '\0';
+	return (dest);
 }

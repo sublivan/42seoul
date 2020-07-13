@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 19:36:07 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/13 10:59:27 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/13 15:44:03 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_str_is_printable(char *str)
 	while (*str != '\0')
 	{
 		cp = *str;
-		if (cp >= 33 & cp <= 126)
+		if (cp >= 32 & cp <= 126)
 			result = 1;
 		else
 			return (0);

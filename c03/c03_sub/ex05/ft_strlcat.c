@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/11 13:00:53 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/13 16:03:17 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/13 14:53:32 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/13 15:04:26 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int index;
+	unsigned int i;
+	unsigned int j;
 
-	index = 0;
-	if(size != 0)
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		while (index < size - 1 && src[index])
-		{
-			dest[index] = src[index];
-			++index;
-		}
-		dest[index] = '\0';
+		i++;
 	}
-	while (src[index])
+	while (src[j] != '\0' && i + j + 1 < size)
 	{
-		++index;
+		dest[i + j] = src[j];
+		j++;
 	}
-	return (index);
+	dest[i + j] = '\0';
+	while (src[j] != '\0')
+	{
+		j++;
+	}
+	if (size < i)
+		return (j + size);
+	else
+		return (i + j);
 }

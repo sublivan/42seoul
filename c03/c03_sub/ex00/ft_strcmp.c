@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/11 13:00:53 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/13 16:03:17 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/13 14:03:28 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/13 14:06:48 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int		ft_strcmp(char *s1, char *s2)
 {
-	unsigned int index;
+	char c1;
+	char c2;
 
-	index = 0;
-	if(size != 0)
+	while (1)
 	{
-		while (index < size - 1 && src[index])
+		c1 = *s1++;
+		c2 = *s2++;
+		if (c1 != c2)
 		{
-			dest[index] = src[index];
-			++index;
+			if (c1 > c2)
+				return (1);
+			else
+				return (-1);
 		}
-		dest[index] = '\0';
+		if (c1 == '\0' || c2 == '\0')
+			break ;
 	}
-	while (src[index])
-	{
-		++index;
-	}
-	return (index);
+	return (0);
 }
