@@ -6,24 +6,23 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:12:14 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/13 15:23:18 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/13 18:58:00 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int index;
+	char *temp;
 
-	index = 0;
-	while (*dest)
+	temp = dest;
+	while (*temp)
 	{
-		++dest;
+		++temp;
 	}
-	while (index < nb)
+	while (nb > 0 && *src)
 	{
-		*dest++ = *src++;
-		index++;
+		*temp++ = *src++;
 	}
-	*dest = '\0';
+	*temp = '\0';
 	return (dest);
 }
