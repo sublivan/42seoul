@@ -1,7 +1,19 @@
-unsigned int  ft_strlcat(char *dest, char *src, unsigned int size)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/13 14:53:32 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/13 18:22:13 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-    unsigned int i;
-    unsigned int j;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
 	j = 0;
@@ -19,9 +31,8 @@ unsigned int  ft_strlcat(char *dest, char *src, unsigned int size)
 	{
 		j++;
 	}
-	if(size < i )
+	if (size < i)
 		return (j + size);
 	else
 		return (i + j);
-
 }

@@ -12,5 +12,4 @@ int		ft_is_prime(int nb)
 		check--;	
 	}
 	return 1;
-	
-
+}

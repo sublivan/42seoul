@@ -1,26 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/13 14:07:02 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/13 18:56:51 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char c1;
-	char c2;
-	int index;
+	unsigned int index;
 
 	index = 0;
-	while (index <= n)
+	while (index < n)
 	{
-		c1 = *s1++;
-		c2 = *s2++;
-
-		if(c1 != c2)
+		if (s1[index] != s2[index])
 		{
-			if(c1 > c2)
+			if (s1[index] > s2[index])
 				return (1);
 			else
 				return (-1);
 		}
-		if(c1 == '\0' || c2 == '\0')
-			break;
+		if (s1[index] == '\0' || s2[index] == '\0')
+			break ;
+		index++;
 	}
-	return 0;
+	return (0);
 }
-
