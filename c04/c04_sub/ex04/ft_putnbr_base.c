@@ -49,7 +49,6 @@ void	putnbr_base_recursive(int n, char *base, int len)
 		putnbr_base_recursive(n / len, base, len);
 	}
 	ft_putchar(&(base[n % len]));
-
 }
 
 int 	get_length(char *base)
@@ -70,5 +69,5 @@ int		ft_putnbr_base(int nbr, char *base)
 	if (vaild(base))
 		return ;
 	length = get_length(base);
-	putnbr_base_recur(nbr, base, length);
+	putnbr_base_recursive(nbr, base, length);
 }
