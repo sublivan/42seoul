@@ -1,9 +1,10 @@
+
 int		vaild(char *base)
 {
 	int i;
 	int j;
 	
-	if (base[0] == '\0' || get_length(base) <= 1)
+	if (base[0] == '\0' || base[1] == '\0')
 		return (0);
 	i = 0;
 	while (base[i] != '\0')
@@ -41,7 +42,6 @@ int		is_space(char *str)
 {
 	return (*str == '\t' || *str == '\n' || *str == '\v'
 	|| *str == '\f'|| *str == '\r' ||*str == ' ');
-
 }
 
 int		atoi_get_int(char c, char *base)
@@ -87,23 +87,4 @@ int		ft_atoi_base(char *str, char *base)
 		++str;
 	}
 	return (result * sign);
-}
-
-
-#include <stdio.h>
-
-int	main(void)
-{
-	
-	printf("%d ", ft_atoi_base("42", "0123456789"));
-	printf("%d ", ft_atoi_base("   42abc", "0123456789"));
-	printf("%d ", ft_atoi_base("  +--++-rcrdmddd+-abc", "mrdoc"));
-	printf("%d ", ft_atoi_base("-10000000000000000000000000000000", "01"));
-	printf("%d ", ft_atoi_base("8888888888888888888888888888888", "a8"));
-	printf("%d ", ft_atoi_base("one", "e"));
-	printf("%d ", ft_atoi_base("blank", ""));
-	printf("%d ", ft_atoi_base("", "za"));
-	printf("%d ", ft_atoi_base("ca", "zaca"));
-	printf("%d ", ft_atoi_base("ca", "z\v\f\nac"));
-	printf("\n");
 }
