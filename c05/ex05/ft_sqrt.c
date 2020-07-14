@@ -1,13 +1,15 @@
 int		ft_sqrt(int nb)
 {
-	
 	int x;
-	
+
 	x = 1;
-	while(-0.01 > (x * x - nb) || 0.01 < (x * x - nb))
+	if(nb < 0)
+		return 0;
+	while(nb > x)
 	{
-		x = 0.5 * (x + nb / x);
+		if(x * x == nb)
+			return x;
+		x++;
 	}
-	
-	return x;
+	return 0;
 }

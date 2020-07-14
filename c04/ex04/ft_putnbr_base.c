@@ -15,8 +15,7 @@ int		vaild(char *base)
 	i = 0;
 	while (base[i] != '\0')
 	{
-		if (base[i] == '\t' || base[i] == '\n' || base[i] == '\v' || base[i] == '\f'
-			|| base[i] == '\r' || base[i] == ' ' || base[i] == '+' || base[i] == '-')
+		if (base[i] == '+' || base[i] == '-')
 			return (0);
 		j = i + 1;
 		while (base[j] != '\0')
@@ -35,7 +34,7 @@ void	putnbr_base_recursive(int n, char *base, int len)
 	if(n == -2147483648)
 	{
 		putnbr_base_recursive(n / len, base, len);
-		ft_putchar(&(base[-(n % len)]));
+		ft_putchar((base[-(n % len)]));
 		return ;
 	}
 	if(n < 0)
@@ -44,11 +43,11 @@ void	putnbr_base_recursive(int n, char *base, int len)
 		putnbr_base_recursive(-n, base, len);
 		return ;
 	}
-	if(n > len -1)
+	if(n > len - 1)
 	{
 		putnbr_base_recursive(n / len, base, len);
 	}
-	ft_putchar(&(base[n % len]));
+	ft_putchar((base[n % len]));
 }
 
 int 	get_length(char *base)
@@ -60,13 +59,13 @@ int 	get_length(char *base)
 	{
 		i++;
 	}
-	return i;
+	return (i);
 }
 
 int		ft_putnbr_base(int nbr, char *base)
 {
 	int length;
-	if (vaild(base))
+	if (!vaild(base))
 		return ;
 	length = get_length(base);
 	putnbr_base_recursive(nbr, base, length);
