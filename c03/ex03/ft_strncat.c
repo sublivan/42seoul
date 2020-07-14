@@ -19,7 +19,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	{
 		++temp;
 	}
-	while (nb > 0 && *src)
+	while (nb - 1 > 0 && *src)
 	{
 		*temp++ = *src++;
 	}
