@@ -10,6 +10,10 @@ ex00:
 	printf("%d\n", ft_iterative_factorial(4));
 	printf("%d\n", ft_iterative_factorial(5));
 	printf("%d\n", ft_iterative_factorial(0));
+	printf("%d\n", ft_iterative_factorial(6));
+	printf("%d\n", ft_iterative_factorial(7));
+	printf("%d\n", ft_iterative_factorial(8));
+	printf("%d\n", ft_iterative_factorial(9));
 
 ex00-expected:
 
@@ -17,18 +21,30 @@ ex00-expected:
 24
 120
 1
+720
+5040
+40320
+362880
 
 ex01:
 	printf("%d\n", ft_recursive_factorial(3));
 	printf("%d\n", ft_recursive_factorial(4));
 	printf("%d\n", ft_recursive_factorial(5));
 	printf("%d\n", ft_recursive_factorial(0));
+	printf("%d\n", ft_iterative_factorial(6));
+	printf("%d\n", ft_iterative_factorial(7));
+	printf("%d\n", ft_iterative_factorial(8));
+	printf("%d\n", ft_iterative_factorial(9));
 ex01-expected:
 
 6
 24
 120
 1
+720
+5040
+40320
+362880
 
 ex02:
 
@@ -143,6 +159,7 @@ ex07:
 	printf("%d\n", ft_find_next_prime(-1281));
 	printf("%d\n", ft_find_next_prime(0));
 	printf("%d\n", ft_find_next_prime(1));
+	printf("%d\n", ft_find_next_prime(2));
 
 ex07-expected:
 
@@ -151,6 +168,7 @@ ex07-expected:
 29
 29
 2147483647
+2
 2
 2
 2
