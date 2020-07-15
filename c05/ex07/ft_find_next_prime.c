@@ -1,24 +1,39 @@
-int 	prime_check(int nb)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/15 13:54:28 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/15 14:52:16 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		prime_check(int nb)
 {
 	int check;
-	
-	check = nb - 1;
-	while (check > 1)
+	int i;
+
+	i = 2;
+	check = nb / 2;
+	while (i <= check)
 	{
-		if (nb % check == 0)
+		if (nb % i == 0)
 			return (0);
-		check--;	
+		i++;
 	}
 	return (1);
 }
+
 int		ft_find_next_prime(int nb)
-{	
-	while(1)
+{
+	while (1)
 	{
 		if (nb <= 1)
 			return (0);
 		if (nb == 2147483630)
-			return 2147483647;
+			return (2147483647);
 		if (prime_check(nb))
 			return (nb);
 		nb += 1;

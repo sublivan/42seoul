@@ -1,19 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/15 10:37:51 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/15 10:42:50 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
-char	ft_putchar(char c)
+void		ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-int		vaild(char *base)
+int			vaild(char *base)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
+	i = 0;
 	if (base[0] == '\0' || base[1] == '\0')
 		return (0);
-	i = 0;
 	while (base[i] != '\0')
 	{
 		if (base[i] == '+' || base[i] == '-')
@@ -22,7 +33,9 @@ int		vaild(char *base)
 		while (base[j] != '\0')
 		{
 			if (base[i] == base[j])
+			{
 				return (0);
+			}
 			j++;
 		}
 		i++;
@@ -30,7 +43,7 @@ int		vaild(char *base)
 	return (1);
 }
 
-void	putnbr_base_recursive(int n, char *base, int len)
+void		putnbr_base_recursive(int n, char *base, int len)
 {
 	if (n == -2147483648)
 	{
@@ -51,21 +64,21 @@ void	putnbr_base_recursive(int n, char *base, int len)
 	ft_putchar((base[n % len]));
 }
 
-int		get_length(char *base)
+int			get_length(char *base)
 {
-	int i;
+	int		index;
 
-	i = 0;
-	while (base[i] != '\0')
+	index = 0;
+	while (base[index] != '\0')
 	{
-		i++;
+		index++;
 	}
-	return (i);
+	return (index);
 }
 
-int		ft_putnbr_base(int nbr, char *base)
+void		ft_putnbr_base(int nbr, char *base)
 {
-	int length;
+	int		length;
 
 	if (!vaild(base))
 		return ;

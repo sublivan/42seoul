@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/15 10:13:56 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/15 10:28:36 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int		vaild(char *base)
 {
 	int i;
 	int j;
-	
+
 	if (base[0] == '\0' || base[1] == '\0')
 		return (0);
 	i = 0;
@@ -26,10 +37,10 @@ int		vaild(char *base)
 	return (1);
 }
 
-int 	get_length(char *base)
+int		get_length(char *base)
 {
 	int i;
-	
+
 	i = 0;
 	while (base[i] != '\0')
 	{
@@ -41,7 +52,7 @@ int 	get_length(char *base)
 int		is_space(char *str)
 {
 	return (*str == '\t' || *str == '\n' || *str == '\v'
-	|| *str == '\f'|| *str == '\r' ||*str == ' ');
+			|| *str == '\f' || *str == '\r' || *str == ' ');
 }
 
 int		atoi_get_int(char c, char *base)
@@ -71,20 +82,17 @@ int		ft_atoi_base(char *str, char *base)
 	result = 0;
 	length = get_length(base);
 	while (is_space(str) != 0)
-	{
 		str++;
-	}
 	while (*str == '-' || *str == '+')
 	{
-		if(*str== '-')
+		if (*str == '-')
 			sign *= -1;
-		str++;
+		++str;
 	}
-	while ((change = atoi_get_int(*str, base)) != -1)
+	while ((change = atoi_get_int(*str++, base)) != -1)
 	{
 		result *= length;
 		result += change;
-		++str;
 	}
 	return (result * sign);
 }

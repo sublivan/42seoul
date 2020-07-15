@@ -5,7 +5,7 @@
 	#include <unistd.h>
 
 
-	int		ft_putnbr_base(int nbr, char *base);
+	void		ft_putnbr_base(int nbr, char *base);
 
 	void printmsg(const char *msg, ...)
 	{
