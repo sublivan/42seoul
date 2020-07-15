@@ -4,7 +4,7 @@
 	#include <string.h>
 	#include <stdlib.h>
 
-int		ft_recursive_power(int nb, int power);
+int		ft_find_next_prime(int nb);
 
 void printmsg(const char *msg, ...)
 {
@@ -33,10 +33,11 @@ void print_testing(const char *code)
 
 int main()
 {
-	
-	printf("%d\n", ft_recursive_power(3, 3));
-	printf("%d\n", ft_recursive_power(0, 0));
-	printf("%d\n", ft_recursive_power(3, 0));
-	printf("%d\n", ft_recursive_power(0, 3));
-	printf("%d\n", ft_recursive_power(-2, 5));
+		printf("%d\n", ft_find_next_prime(-2));
+	printf("%d\n", ft_find_next_prime(24));
+	printf("%d\n", ft_find_next_prime(29));
+	printf("%d\n", ft_find_next_prime(2147483630));
+	printf("%d\n", ft_find_next_prime(-1281));
+	printf("%d\n", ft_find_next_prime(0));
+	printf("%d\n", ft_find_next_prime(1));
 }

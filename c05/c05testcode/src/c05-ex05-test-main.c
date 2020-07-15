@@ -4,7 +4,7 @@
 	#include <string.h>
 	#include <stdlib.h>
 
-int		ft_find_next_prime(int nb);
+int		ft_sqrt(int nb);
 
 void printmsg(const char *msg, ...)
 {
@@ -33,8 +33,16 @@ void print_testing(const char *code)
 
 int main()
 {
-		printf("%d\n", ft_find_next_prime(-2));
-	printf("%d\n", ft_find_next_prime(24));
-	printf("%d\n", ft_find_next_prime(29));
-	printf("%d\n", ft_find_next_prime(2147483630));
+	
+	printf("%d\n", ft_sqrt(-2));
+	printf("%d\n", ft_sqrt(0));
+	printf("%d\n", ft_sqrt(1));
+	printf("%d\n", ft_sqrt(4));
+	printf("%d\n", ft_sqrt(6));
+	printf("%d\n", ft_sqrt(9));
+	printf("%d\n", ft_sqrt(15));
+	printf("%d\n", ft_sqrt(16));
+	printf("%d\n", ft_sqrt(17));
+	printf("%d\n", ft_sqrt(1477232753));
+	printf("%d\n", ft_sqrt(2052362921));
 }

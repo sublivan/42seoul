@@ -36,4 +36,5 @@ int main()
 		printf("%d\n", ft_recursive_factorial(3));
 	printf("%d\n", ft_recursive_factorial(4));
 	printf("%d\n", ft_recursive_factorial(5));
+	printf("%d\n", ft_recursive_factorial(0));
 }

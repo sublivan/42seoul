@@ -31,7 +31,7 @@ int		ft_find_next_prime(int nb)
 	while (1)
 	{
 		if (nb <= 1)
-			return (0);
+			return (2);
 		if (nb == 2147483630)
 			return (2147483647);
 		if (prime_check(nb))
