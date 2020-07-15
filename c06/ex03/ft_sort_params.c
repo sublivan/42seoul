@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/15 17:41:37 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/15 17:46:29 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void		ft_putstr(char *str)
 {
 	while (*str)
 	{
@@ -8,51 +20,57 @@ void	ft_putstr(char *str)
 	}
 }
 
-void	swap(char **a, char **b)
+int			ft_strcmp(char *s1, char *s2)
 {
-	char *temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
+		{
+			return (*s1 - *s2);
+		}
+		++s1;
+		++s2;
+	}
+	return (*s1 - *s2);
 }
 
-void	sort(char **str)
+void		sort(int ac, char *str[])
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
+	char	*temp;
 
 	i = 1;
-	while (str[i])
+	while (i < ac)
 	{
-		j = i + 1;
-		while (str[j])
+		j = 1;
+		while (j < ac)
 		{
-			if (str[j - 1] > str[j])
+			if (ft_strcmp(str[j - 1], str[j]) > 0)
 			{
-				swap(str[j], str[j - 1]);
+				temp = str[j - 1];
+				str[j - 1] = str[j];
+				str[j] = temp;
 			}
 			j++;
 		}
-		i = 1;
-	}
-	j = i;
-	i = 1;
-	while(i < j)
-	{
-		ft_putstr(str[i]);
 		i++;
 	}
 }
 
-int		main(int ac, char **av)
+int			main(int ac, char **av)
 {
 	int i;
 
 	if (ac > 2)
-	{	
-		sort(av);
+	{
+		sort(ac, av);
+		i = 1;
+		while (i < ac)
+		{
+			ft_putstr(av[i]);
+			write(1, "\n", 1);
+			i++;
+		}
 	}
-	write(1, "\n", 1);
-	// sort(arr);	
 }
