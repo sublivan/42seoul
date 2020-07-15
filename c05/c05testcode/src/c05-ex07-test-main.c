@@ -40,4 +40,5 @@ int main()
 	printf("%d\n", ft_find_next_prime(-1281));
 	printf("%d\n", ft_find_next_prime(0));
 	printf("%d\n", ft_find_next_prime(1));
+	printf("%d\n", ft_find_next_prime(2));
 }
