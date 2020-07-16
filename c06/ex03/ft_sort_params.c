@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 17:41:37 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/15 17:46:29 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/16 16:54:18 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void		sort(int ac, char *str[])
 		j = 2;
 		while (j < ac)
 		{
-			if (ft_strcmp(str[j -1], str[j]) > 0)
+			if (ft_strcmp(str[j - 1], str[j]) > 0)
 			{
 				temp = str[j - 1];
 				str[j - 1] = str[j];
