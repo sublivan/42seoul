@@ -18,8 +18,8 @@ int		ft_sqrt(int nb)
 		return (0);
 	if (nb <= 1)
 		return (nb);
-	x = 0;
-	while (x * x <= nb)
+	x = 1;
+	while (x <= nb / 2)
 	{
 		if (x * x == nb)
 			return (x);

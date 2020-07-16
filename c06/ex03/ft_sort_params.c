@@ -43,10 +43,10 @@ void		sort(int ac, char *str[])
 	i = 1;
 	while (i < ac)
 	{
-		j = 1;
+		j = 2;
 		while (j < ac)
 		{
-			if (ft_strcmp(str[j - 1], str[j]) > 0)
+			if (ft_strcmp(str[j -1], str[j]) > 0)
 			{
 				temp = str[j - 1];
 				str[j - 1] = str[j];
@@ -62,7 +62,7 @@ int			main(int ac, char **av)
 {
 	int i;
 
-	if (ac > 2)
+	if (ac >= 2)
 	{
 		sort(ac, av);
 		i = 1;
