@@ -6,18 +6,17 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 16:42:29 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/16 16:46:53 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/18 14:35:43 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		prime_check(int nb)
 {
 	int check;
-	int i;
+	long long i;
 
 	i = 2;
-	check = nb / 2;
-	while (i <= check)
+	while (i * i <= nb)
 	{
 		if (nb % i == 0)
 			return (0);
@@ -32,8 +31,8 @@ int		ft_find_next_prime(int nb)
 	{
 		if (nb <= 1)
 			return (2);
-		if (nb == 2147483630)
-			return (2147483647);
+		//if (nb == 2147483630)
+		//	return (2147483647);
 		if (prime_check(nb))
 			return (nb);
 		nb += 1;
