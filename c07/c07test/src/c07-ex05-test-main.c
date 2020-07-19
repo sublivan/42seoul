@@ -4,7 +4,7 @@
 	#include <string.h>
 	#include <stdlib.h>
 
-
+char **ft_split(char *str, char *charset);
 
 void print_ho(char* src, char* charset)
 {

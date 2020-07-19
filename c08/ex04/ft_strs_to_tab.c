@@ -61,7 +61,6 @@ struct s_stock_str		*ft_strs_to_tab(int ac, char **av)
 {
 	t_stock_str *stock;
 	t_stock_str *temp;
-	int size;
 	int i;
 
 	stock = (t_stock_str *)malloc(sizeof(t_stock_str) * (ac + 1));

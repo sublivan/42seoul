@@ -12,4 +12,7 @@ int main()
 		char* p = ft_strdup("Hello World!");
 	printf("content: %s\n", p);
 	printf("len: %lu\n", strlen(p));
+
+	printf("content: %s\n", ft_strdup(""));
+	printf("content: %s\n", ft_strdup(" "));
 }

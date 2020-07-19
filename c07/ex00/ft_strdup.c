@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 18:58:21 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/18 19:04:23 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/19 13:33:54 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ char	*ft_strdup(char *src)
 	char	*temp;
 	int		index;
 
-	if (src[0] == 0)
-		return (0);
 	index = 0;
 	temp = (char*)malloc(get_length(src) * sizeof(char) + 1);
 	while (src[index])
