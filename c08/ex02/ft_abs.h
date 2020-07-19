@@ -1,7 +1,18 @@
-#ifndef _FT_ABS_H_
-#define _FT_ABS_H_
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/19 14:14:11 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/19 16:08:42 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#define ABS(Value) (Value < 0 ? Value * -1 : Value)
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
+# define ABS(Value) (Value < 0 ? -Value : Value)
 
 #endif
