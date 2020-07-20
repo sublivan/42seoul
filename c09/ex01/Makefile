@@ -1,38 +1,36 @@
-SRCS = ./srcs/ft_putchar.c 
-		./srcs/ft_swap.c 
-		./srcs/ft_putstr.c 
-		./srcs/ft_strlen.c 
-		./srcs/ft_strcmp.c
+SRCS = srcs/ft_putchar.c srcs/ft_swap.c srcs/ft_putstr.c srcs/ft_strlen.c srcs/ft_strcmp.c
 
-INCS = ./includes
+INCS = includes
+
+TARGET = libft.a
 
 OBJS = ${SRCS:.c=.o} 
 
 AR = ar
-ARCRV = crv
-TARGET = libft.a
+ARCRS = crs
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
-all :
-	${TARGET}
+.c.o : 
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
 
-.c.o :
-	${CC} ${CFLAGS} -I${INCS} -c $< -o ${<:.c=.o} 
+${TARGET} : ${OBJS}
+	${AR} ${ARCRS} ${TARGET} ${OBJS}
 
-claen :
-	rm -f ${OBJS}
+all : ${TARGET}
 
-fclean :
-	rm -f ${TRAGET}
+clean : 
+	${RM} ${OBJS}
 
-re :
-	fclean all
+fclean : clean
+	${RM} ${TARGET}
 
-norm :
+re : fclean all
+
+norm : 
 	norminette -R CheckForbiddenSourceHeader */*.[ch]
 
-
+.PHONY: all clean fclean re .c.o norm

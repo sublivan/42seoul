@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 16:23:23 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/19 16:26:30 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/20 10:47:06 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char				*ft_strcpy(char *str, int size)
 	char	*temp;
 
 	i = 0;
-	temp = (char *)malloc(sizeof(char) * size + 1);
+	temp = (char *)malloc(sizeof(char) * (size + 1));
 	if (temp == 0)
 	{
 		return (0);
