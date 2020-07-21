@@ -1,4 +1,8 @@
 #include "ft.h"
+//#include "map_read.h"
+//#include "function.h"
+
+#include <stdio.h>
 
 char		*cpy_str(char *a, char *b)
 {
@@ -90,7 +94,7 @@ t_map_info	set_info(char *str)
 	return (map_info);
 }
 
-#include <stdio.h>
+
 t_map_info file_to_struct()
 {
 	char *c;
@@ -130,6 +134,12 @@ t_map_info file_to_struct()
 		i++;
 	}
 	return (map_info);
+}
+
+
+int Min(int a, int b, int c) {
+	a = a < b ? a : b;
+	return a < c ? a : c;
 }
 
 int     main(void)
