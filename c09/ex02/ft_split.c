@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 16:03:31 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/20 21:09:13 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/07/21 10:12:34 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ int		word_count(char *str, char *charset)
 
 	cnt = 0;
 	i = 0;
+	if (str[i] && !is_charset(str[i], charset))
+	{
+		i++;
+		cnt++;
+	}
 	while (str[i] != 0)
 	{
 		if (is_charset(str[i], charset) == 1)
@@ -69,7 +74,7 @@ char	**ft_charset(char **result, char *str, char *charset)
 
 	i = 0;
 	cnt = 0;
-	start = 0;
+	start = 1;
 	if (str[i] && (is_charset(str[i], charset) == 0))
 	{
 		start = i;
