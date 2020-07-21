@@ -1,3 +1,4 @@
+//구현못함
 #include <stdlib.h>
 int			vaild(char *base)
 {
