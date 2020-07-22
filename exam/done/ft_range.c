@@ -4,29 +4,29 @@
 int		*ft_range(int min, int max)
 {
 	int *dest;
-	int index;
 	int size;
+	int i;
 
-	size = max >= min ? max - min : min - max;
-	if(!(dest = (int *)malloc(sizeof(int) * size)))
-		return (NULL);
-	index = 0;
-	while (max != min)
+	size = max > min ? max - min : min - max;
+	if(!(dest = (int *)malloc(sizeof(int) * (size + 1))))
+		return (0);
+	i = 0;
+	while (i <= size)
 	{
-		*(dest++) = max > min ? min++ : min--;
+		dest[i] = max > min ? min + i : max + i;
+		i++;
 	}
 	return (dest);
 }
 
 
-int		main(void)
+int main(void)
 {
-	int *a = ft_range(-1, 2);
-	while (*a)
-	{
-		printf("%d", *a++);
-	}
-	printf("\n");
+	int *num = ft_range(-1, 2);
+	int i = 0;
+	
+	for(int i =0; i < 6; i++)
+		printf("%d ", num[i]);
 }
 /*
 다음 함수를 작성하십시오.

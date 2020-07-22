@@ -1,25 +1,22 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = main.c \
-	   operators.c \
-	   ft_atoi.c \
-	   ft_putnbr.c
-OBJS = $(SRCS:.c=.o)
 
 TARGET = do-op
+SOURCES = $(wildcard *.c)
+OBJECTS = $(SOURCES:.c=.o)
 
-$(TARGET) : $(OBJS)
+all: $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $<
+
+$(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
 
-all : $(TARGET)
+clean:
+	rm -f $(OBJECTS)
 
-.c.o :
-	$(CC) $(CFLAGS) -c -o $(<:.c=.o) $<
+fclean: clean
+	rm -f $(TARGET)
 
-clean :
-	rm -f $(OBJS)
-
-fclean : clean
-	rm -r $(TARGET)
-
-re : fclean all
+re: fclean all

@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/22 13:42:11 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/22 13:52:53 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/22 13:42:33 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/22 13:54:23 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_any(char **tab, int (*f)(char *))
+int		ft_count_if(char **tab, int length, int (*f)(char *))
 {
+	int count;
 	int i;
 
+	count = 0;
 	i = 0;
-	while (tab[i])
+	while (i < length)
 	{
 		if (f(tab[i]))
-			return (1);
+			count++;
 		i++;
 	}
-	return (0);
+	return (count);
 }

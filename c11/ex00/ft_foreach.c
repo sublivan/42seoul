@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   f.c                                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/22 13:37:48 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/22 13:40:33 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-void	ft_foreach(int *tab, int length, void(*f)(int))
+void		ft_foreach(int *tab, int length, void(*f)(int))
 {
 	int i;
 
+	i = 0;
 	while (i < length)
 	{
 		f(tab[i]);

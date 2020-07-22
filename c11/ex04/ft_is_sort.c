@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_is_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/22 13:42:11 by minsukim          #+#    #+#             */
-/*   Updated: 2020/07/22 13:52:53 by minsukim         ###   ########.fr       */
+/*   Created: 2020/07/22 13:42:51 by minsukim          #+#    #+#             */
+/*   Updated: 2020/07/22 13:59:10 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_any(char **tab, int (*f)(char *))
+int			ft_is_sort(int *tab, int length, int(*f)(int, int))
 {
-	int i;
+	int k;
+	int tmp;
 
-	i = 0;
-	while (tab[i])
+	k = 0;
+	while (length-- > 1)
 	{
-		if (f(tab[i]))
-			return (1);
-		i++;
+		tmp = f(tab[length], tab[length - 1]);
+		if (tmp == 0)
+			continue;
+		if (k == 0)
+			k = tmp;
+		else if ((k < 0 && tmp > 0) || (k > 0 && tmp < 0))
+			return (0);
 	}
-	return (0);
+	return (1);
 }
