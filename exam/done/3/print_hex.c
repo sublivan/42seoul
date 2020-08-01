@@ -2,7 +2,7 @@
 
 void	print_hex(int nb)
 {
-	if(nb > 16)
+	if(nb >= 16)
 	{
 		print_hex(nb / 16);
 	}
