@@ -11,5 +11,5 @@ int main(void)
 		printf("%c", str[i]);
 	}
 
-	return 0;
+	return (0);
 }
