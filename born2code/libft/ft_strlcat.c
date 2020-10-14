@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/14 16:27:13 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/14 20:23:18 by minsukim         ###   ########.fr       */
+/*   Created: 2020/10/14 20:50:24 by minsukim          #+#    #+#             */
+/*   Updated: 2020/10/14 20:50:25 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *destination, const void *source, size_t num)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*src;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	i;
 
-	dest = (unsigned char*)destination;
-	src = (unsigned char*)source;
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	i = 0;
-	while (i < num)
+	if (size <= dest_len)
 	{
-		dest[i] = src[i];
+		return (src_len + size);
+	}
+	while (i < src_len)
+	{
+		dest[dest_len] = src[i];
+		dest_len++;
 		i++;
 	}
-	return (dest);
+	dest[dest_len] = '\0';
+	return (dest_len);
 }

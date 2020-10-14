@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/14 16:27:13 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/14 20:23:18 by minsukim         ###   ########.fr       */
+/*   Created: 2020/10/07 20:02:34 by minsukim          #+#    #+#             */
+/*   Updated: 2020/10/07 20:04:24 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *destination, const void *source, size_t num)
+char	*ft_strrchr(const char *str, int ch)
 {
-	size_t			i;
-	unsigned char	*dest;
-	unsigned char	*src;
+	int i;
 
-	dest = (unsigned char*)destination;
-	src = (unsigned char*)source;
 	i = 0;
-	while (i < num)
+	while (str[i])
 	{
-		dest[i] = src[i];
 		i++;
 	}
-	return (dest);
+	while (i >= 0)
+	{
+		if (str[i] == (char)ch)
+		{
+			return ((char *)(str + i));
+		}
+		i--;
+	}
+	return (NULL);
 }
