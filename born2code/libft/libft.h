@@ -16,4 +16,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size);
 size_t	ft_strlen(const char *str);
 char	*ft_strrchr(const char *str, int ch);
 
+
+
+
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+
 #endif
