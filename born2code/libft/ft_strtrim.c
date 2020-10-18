@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/19 00:27:54 by minsukim          #+#    #+#             */
+/*   Updated: 2020/10/19 00:27:55 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int		str_in_set(char c, char const *set)
@@ -16,10 +28,10 @@ int		str_in_set(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *result;
-	size_t start;
-	size_t end;
-	size_t i;
+	char	*result;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 
 	start = 0;
 	while (s1[start] && str_in_set(s1[start], set))

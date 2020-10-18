@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/19 00:27:32 by minsukim          #+#    #+#             */
+/*   Updated: 2020/10/19 00:36:07 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*strnstr(const char *big, const char *little, size_t len)
@@ -14,7 +26,7 @@ char	*strnstr(const char *big, const char *little, size_t len)
 		while (big[i + j] && little[j] && i + j < len)
 		{
 			if (big[i + j] != little[j])
-				break;
+				break ;
 			j++;
 		}
 		if (little[j] == '\0')
