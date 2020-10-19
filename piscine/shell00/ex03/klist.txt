@@ -1,0 +1,6 @@
+Credentials cache: API:ECC4B136-C7BD-4299-BD84-CE93EE1CC673
+        Principal: minsukim@42SEOUL.KR
+
+  Issued                Expires               Principal
+Jul  2 17:30:01 2020  Jul  3 03:30:01 2020  krbtgt/42SEOUL.KR@42SEOUL.KR
+Jul  2 17:30:02 2020  Jul  3 03:30:01 2020  HTTP/student-storage.42seoul.kr@42SEOUL.KR
