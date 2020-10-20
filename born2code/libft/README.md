@@ -65,6 +65,10 @@
   
  ```
 
+t_list 구조체 설명
+* content : 요소에 포함된 데이터. void 포인터는 어떠한 종류의 자료형이든 저장할 수 있습니다. 
+* next : 마지막 요소인 경우에는 NULL. 또는 다음 요소의 주소.
+
 > • ft_lstnew • ft_lstadd_front • ft_lstsize • ft_lstlast • ft_lstadd_back • ft_lstdelone • ft_lstclear • ft_lstiter • ft_lstmap
   
   
