@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/21 14:04:41 by minsukim          #+#    #+#             */
+/*   Updated: 2020/10/21 15:37:17 by minsukim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*make_str_part(char const *str, int len)
 {
 	char	*part;
 	int		i;
+
 	if (!(part = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	i = 0;
@@ -48,7 +61,7 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	res_len;
 	size_t	res_index;
-	size_t 	start;
+	size_t	start;
 
 	res_len = word_count(s, c);
 	if (!(result = (char **)malloc(sizeof(char *) * (res_len + 1))))
