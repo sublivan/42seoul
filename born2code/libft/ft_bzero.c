@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 21:09:40 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/07 21:10:29 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/10/21 20:17:01 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_bzero(void *str, size_t n)
 {
 	unsigned char	*change_str;
-	int				index;
+	size_t			index;
 
 	change_str = (unsigned char *)str;
 	index = 0;

@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 21:06:31 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/14 21:06:32 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/10/21 21:09:00 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *str, int character)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] != character)
 	{
-		if (str[i] == (char)character)
+		if (str[i] == '\0')
 		{
-			return ((char *)str + i);
+			return (NULL);
 		}
 		i++;
 	}
-	return (NULL);
+	return ((char *)str + i);
 }

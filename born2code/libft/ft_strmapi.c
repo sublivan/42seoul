@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 14:04:51 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/21 14:04:52 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/10/21 20:18:44 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if (!(new_str = (char *)malloc(sizeof(char) * (len + 1))))
+	if (!(new_str = (char *)malloc(sizeof(char) * (s_len + 1))))
 		return (NULL);
 	i = 0;
 	while (s[i])

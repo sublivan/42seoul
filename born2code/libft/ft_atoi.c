@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/19 00:24:34 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/19 00:29:22 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/10/21 20:17:50 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isspace(char str)
 {
-	if (9 <= str && str <= 13 || str == 32)
+	if ((9 <= str && str <= 13) || str == 32)
 		return (1);
 	return (0);
 }

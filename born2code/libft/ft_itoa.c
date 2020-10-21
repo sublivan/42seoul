@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 14:04:02 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/21 14:04:04 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/10/21 21:37:34 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ size_t	get_len(int n)
 
 char	*ft_itoa(int n)
 {
-	char *result;
-	size_t len;
-	size_t i;
+	char	*result;
+	size_t	len;
+	size_t	i;
 
 	len = get_len(n);
 	if (!(result = (char *)malloc(len + 1)))
@@ -42,7 +42,6 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		result[0] = '-';
-		n *= -1;
 		i = 1;
 	}
 	else
@@ -50,7 +49,7 @@ char	*ft_itoa(int n)
 	while (i < len)
 	{
 		len--;
-		result[len] = '0' + n % 10;
+		result[len] = '0' + n % 10 * (n < 0 ? -1 : 1);
 		n /= 10;
 	}
 	return (result);
