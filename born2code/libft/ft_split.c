@@ -38,12 +38,12 @@ size_t	word_count(char const *s, char c)
 	cnt = 0;
 	if (s[i] == '\0')
 		return (0);
-	while (s[i] && s[i] != c)
+	if (s[i] && s[i] != c)
 	{
 		i++;
 		cnt++;
 	}
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (s[i] == c)
 		{
