@@ -9,9 +9,8 @@ void	*ft_bzero(void *str, size_t n)
 	index = 0;
 	while (index < n)
 	{
-		*change_str++ = 0;
+		change_str[index] = 0;
 		index++;
 	}
-	str = change_str;
 	return (str);
 }
