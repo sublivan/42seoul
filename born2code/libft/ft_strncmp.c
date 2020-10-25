@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: minsukim </var/mail/minsukim>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/19 00:29:45 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/21 22:11:42 by minsukim         ###   ########.fr       */
+/*   Created: 2020/10/25 23:16:28 by minsukim          #+#    #+#             */
+/*   Updated: 2020/10/25 23:16:33 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, size_t num)
 {
