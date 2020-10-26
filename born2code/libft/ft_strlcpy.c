@@ -6,7 +6,7 @@
 /*   By: minsukim <minsukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 13:42:47 by minsukim          #+#    #+#             */
-/*   Updated: 2020/10/26 13:42:47 by minsukim         ###   ########.fr       */
+/*   Updated: 2020/10/26 15:14:15 by minsukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	if (i < size)
+		dest[i] = '\0';
 	while (src[i] != '\0')
 	{
 		i++;
