@@ -65,6 +65,7 @@ char	*ft_strdup(const char *s1)
 	while (i < s1_len)
 	{
 		result[i] = s1[i];
+		i++;
 	}
 	result[i] = '\0';
 	return (result);
