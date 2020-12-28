@@ -2,7 +2,7 @@
 
 int	return_line(char **backup, char **line, char *newline_ptr)
 {
-	char	**temp;
+	char	*temp;
 
 	if (newline_ptr)
 	{
