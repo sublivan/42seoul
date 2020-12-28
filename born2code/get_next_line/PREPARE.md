@@ -1,4 +1,4 @@
-## 함수
+## 구현 메소드
 
 ```
 int get_next_line(int fd, char **line);
