@@ -13,7 +13,8 @@ int	return_line(char **backup, char **line, char *newline_ptr)
 		*backup = temp;
 		return (1);
 	}
-	else {
+	else
+	{
 		*line = *backup;
 		*backup = 0;
 	}
