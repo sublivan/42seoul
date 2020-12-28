@@ -9,7 +9,7 @@ int	return_line(char **backup, char **line, char *newline_ptr)
 		newline_ptr[0] = '\0';
 		*line = ft_strdup(*backup);
 		temp = ft_strdup(newline_ptr + 1);
-		free(backup);
+		free(*backup);
 		*backup = temp;
 		return (1);
 	}
