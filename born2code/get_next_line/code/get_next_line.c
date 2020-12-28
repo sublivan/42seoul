@@ -13,6 +13,11 @@ int	return_line(char **backup, char **line, char *newline_ptr)
 		*backup = temp;
 		return (1);
 	}
+	else {
+		*line = *backup;
+		*backup = 0;
+	}
+	return (0);
 }
 
 int	get_next_line(int fd, char **line)
