@@ -21,7 +21,13 @@ get_next_line.c
 
 get_next_line.utils.c
 
-get_netx_line.h
+get_next_line.h
+
+get_next_line_bonus.c
+
+get_next_line_utils_bonus.c
+
+get_next_line_bonus.h
 
 </br>
 
