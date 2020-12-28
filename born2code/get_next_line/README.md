@@ -53,6 +53,17 @@ page 4
 # Chpater 3
 
 Mandatory part - Get_next_line
+|||
+|---|---|
+|Function name|get_next_line|
+|Prototype int|get_next_line(int fd, char **line);|
+|Turn in files|get_next_line.c, get_next_line_utils.c, get_next_line.h
+|Parameters   |#1. file descriptor for reading </br> #2. The value of what has been read
+|Return value|1 : A line has been read </br>0 : EOF has been reached</br>-1 : An error happened|
+|External functs.|read, malloc, free|
+|Description|Write a function which returns a line read from a</br>file descriptor, without the newline.|
+
+</br>
 
 * get_next_line 함수를 반복문 안에서 호출하면 파일 디스크립터에서 사용할 수 있는 텍스트를 EOF가 올때까지 한 번에 한 줄씩 읽을 수 있을 것입니다.
 * 파일에서 읽을 때 그리고 표준입력으로부터 읽어드릴 때, 함수가 제대로 동작하는지 확인하십시오.
