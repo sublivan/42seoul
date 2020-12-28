@@ -1,3 +1,26 @@
+# Get Next Line
+
+파일 디스크립터로부터 읽혀진, newline으로 끝나는 라인을
+반환하는 함수를 코드화 하는 것입니다.
+
+```
+int get_next_line(int fd, char **line);
+```
+
+## 구현 목록
+
+get_next_line.c
+
+get_next_line.utils.c
+
+get_netx_line.h
+
+
+# Subject
+
+<details>
+<summary>보기</summary>
+
 page 0
 
 # Get Next Line
@@ -119,3 +142,5 @@ get_next_line 프로젝트는 간단해서 보너스를 받기 위해 할 수 �
 
 * 하나의 정적변수로 get_next_line 성공하는 것.
 * get_next_line을 사용하여 다중 파일 디스크립터를 관리 할 수 있는 것. 예를 들어, 파일 디스크립터 3, 4, 5가 읽을 수 있는 경우, get_next_line은 3에서 한 번, 4에서 한 번, 다시 3에서 한 번, 5에서 한 번 호출할 수 있습니다. 각 디스크립터의 리딩 쓰레드를 잃지 않고..
+
+</details>
