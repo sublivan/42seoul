@@ -61,10 +61,34 @@ char	*ft_strdup(const char *s1)
 	{
 		return (0);
 	}
+	i = 0;
 	while (i < s1_len)
 	{
 		result[i] = s1[i];
 	}
 	result[i] = '\0';
+	return (result);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*result;
+	size_t	s1_len;
+	size_t	s2_len;
+
+	if (!s1 && !s2)
+	{
+		return (0);
+	}
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	result = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!result)
+	{
+		return (0);
+	}
+	ft_strlcpy(result, s1, s1_len + 1);
+	free((char *)s1);
+	ft_strlcpy(result + s1_len, s2, s2_len + 1);
 	return (result);
 }
