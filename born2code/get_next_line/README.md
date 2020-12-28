@@ -7,9 +7,13 @@
 int get_next_line(int fd, char **line);
 ```
 
+</br>
+
 ## 과제 준비
 
 [PREPARE](https://github.com/meeansub/42seoul/blob/master/born2code/get_next_line/PREPARE.md)
+
+</br>
 
 ## 구현 목록
 
@@ -19,6 +23,35 @@ get_next_line.utils.c
 
 get_netx_line.h
 
+</br>
+
+## get_next_line 로직
+
+
+1. 파일을 read 할 임시 버퍼를 만든다.
+    - char buf[BUFFER_SIZE + 1];
+
+2. read한 버퍼를 백업할 static 버퍼를 만든다.
+    - static char *backup
+
+3. read(fd, buf, BUFFER_SIZE);를 해서 라인을 읽은 다음,
+
+4. buf를 static 변수 backup에 백업한다.
+
+5. backup 안에 개행문자가 있는지 없는지 검사한다.
+
+6. 개행문자가 있으면 다음 단계로 넘어가고, 없다면 개행 문자가 있을 때 까지 3번으로 돌아가 파일을 계속 읽으면서
+  6_1. 기존에 백업한 것과 계속 합쳐나간다.
+    - ft_strjoin(backip[fd], buf)
+
+7. 개행문자가 있는 backup을 개행문자 전과 후로 잘라서, \n 전까지는 line 에다가 주고 \n 후는 다시 static 변수 backup에 백업한다.
+    - return_line
+
+</br>
+
+---
+
+</br>
 
 # Subject
 
