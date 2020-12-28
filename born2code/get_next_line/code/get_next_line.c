@@ -31,7 +31,7 @@ int	get_next_line(int fd, char **line)
 	{
 		backup[fd] = ft_strdup("");
 	}
-	while (!(newline_ptr == ft_strchr(backup[fd], '\n')) && (read_size = read(fd, buf,BUFFER_SIZE)) > 0)
+	while (!(newline_ptr = ft_strchr(backup[fd], '\n')) && (read_size = read(fd, buf,BUFFER_SIZE)) > 0)
 	{
 		buf[read_size] = '\0';
 		backup[fd] = ft_strjoin(backup[fd], buf);
