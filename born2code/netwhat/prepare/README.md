@@ -573,7 +573,9 @@ ftp://000.000.000.000:21
 
 ### [시험 방식]
 
-[바로가기](https://42kchoi.tistory.com/155?category=887188)
+[블로그](https://42kchoi.tistory.com/155?category=887188)
+
+[깃헙](https://github.com/ChoiKanghun/netwhat)
 
 ### [예상문제]
 
