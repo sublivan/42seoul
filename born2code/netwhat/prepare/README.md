@@ -1,4 +1,4 @@
-# NetWhat 
+# NetWhat 준비
 
 ## IP
  * IP(Internet Protocol)는 인터넷상에 있는 개별 네트워크끼리 패킷을 라우팅하는 프로토콜이다.
