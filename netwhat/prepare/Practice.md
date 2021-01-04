@@ -1,9 +1,30 @@
+## 목차
+
 [IP](#IP)
-[]
+
+[Subnet Mask](#Subnet-Mask)
+
+[Network/Boradcast address](#Network/Boradcast-address)
+
+[Host address](#Host-address)
+
+[Public / Private IP address (공인/사설 IP 주소)](#Public-/-Private-IP-address)
+
+[OSI Model](#OSI-Model)
+
+[Application Layer](#Application-Layer)
+
+[Transport Layer](#Transport-Layer)
+
+[Network Layer](#Network-Layer)
+
+</br>
 
 ---
 
 ## IP
+
+### IP Address
 
 **IPv4 address Size**
 ```
@@ -21,6 +42,9 @@ Class C
 Class D
 Class E
 ```
+
+### IP Address Class
+
 **Q. Which IP address class has more host addresses available by default?**
 
 기본적으로 더 많은 호스트 주소를 사용할 수있는 IP 주소 클래스는 무엇입니까?
@@ -35,19 +59,19 @@ Answer : A (First(A))
 Answer : C
 ```
 
-**Q. To the test IP stack on your local host, which IP address would you ping?**
+**Q. To the `test IP` stack on your local host, which IP address would you ping?**
 
-로컬 호스트의 테스트 IP 스택에 어떤 IP 주소를 ping 하시겠습니까?
+로컬 호스트의 `테스트 IP` 스택에 어떤 IP 주소를 ping 하시겠습니까?
 
 ```
-Answer : 127.0.0.1
+Answer : 127.0.0.1 (loop back address (루프백주소))
 ```
 
 </br>
 
 ---
 
-Subnet Mask (서브넷)
+## Subnet Mask
 
 ### CIDR 표기
 
@@ -94,6 +118,12 @@ _______ 서브넷 마스크의 CIDR 표기법은 무엇입니까?
 
 ### 네트워크 주소 구하기
 
+#### 유형
+```
+what is th networt address of ~
+
+```
+
 **Q. What is the network address of a host with an IP address of ______**
 
 IP 주소가 ______ 인 호스트의 네트워크 주소는 무엇입니까?
@@ -135,6 +165,12 @@ Solution : (45.195.37.187) & (255.255.0.0) = 45.195.0.0
 ```
 
 ### 브로드캐스트 주소 구하기
+
+#### 유형
+```
+What is the broadcast address of ~
+```
+
 **Q. What is the broadcast address of a host with an IP address of ______**
 
 IP 주소가 ______ 인 호스트의 브로드 캐스트 주소는 무엇입니까?
@@ -152,6 +188,13 @@ Answer : 51.254.122.255
 ## Host address
 
 ### 호스트 주소수 구하기
+
+#### 유형
+```
+What is the maximum number of IP addresses ~
+
+You have an interface on a router with the IP address of ~
+```
 
 **Q. What is the maximum number of IP addresses that can be assigned to hosts on a local subnet using the _____ subnet mask?**
 
@@ -200,6 +243,13 @@ Solution : 2^(32 - 12) - 2 = 1048576 - 2 = 1048574
 
 ### 호스트주소 범위 구하기
 
+#### 유형
+```
+Which of the following proposals is the valid host range ~
+
+You have an interface on a router with the IP address of ~
+```
+
 **Q. Which of the following proposals is the valid host range for the subnet on which the IP address _______ resides?**
 
 다음 제안 중 IP 주소 ______가 상주하는 서브넷의 유효한 호스트 범위는 무엇입니까?
@@ -225,6 +275,8 @@ Answer : 233.249.144.1-233.249.151.254
 Solution : (Network)233.249.144.0 (Broadcast) 233.249.151.255
 ```
 
+### 호스트 주소 찾기
+
 **Q. If the IP address ______ is assigned to an Ethernet port of a router, what host address could communicate with it?**
 
 IP 주소 ______이 라우터의 이더넷 포트에 할당 된 경우 어떤 호스트 주소가 라우터와 통신 할 수 있습니까?
@@ -240,7 +292,7 @@ Solution : (Network)123.48.184.0 (Broadcast) 123.48.191.255
 
 ---
 
-## Public / Private IP address (공인/사설 IP 주소)
+## Public / Private IP address
 
 Public(공인) IP주소
 
@@ -299,9 +351,10 @@ Answer : Application - Presentation - Session - Transport - Network - Data Link 
 ---
 
 ## Application Layer
-응용 계층
 
-## DNS/DHCP
+### 응용 계층
+
+### DNS/DHCP
 
 ### DNS
 
@@ -350,7 +403,9 @@ DHCP는 _IPV6 및 IPV4_ 모두에 사용됩니다.
 ---
 ## Transport Layer
 
-## TCP & UDP
+### 전송 계층
+
+### TCP & UDP
 
 **TCP & UDP는 Transport Layer(전송계층)에 속한다.**
 
@@ -447,3 +502,9 @@ Answer : ICMP
 </br>
 
 ---
+
+#### 참고 및 출처
+
+[바로 가기](https://velog.io/@hidaehyunlee/Netwhat-%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C-%EC%A0%95%EB%A6%AC)
+
+[바로 가기](https://github.com/365kim/42_cursus/tree/master/2_netwhat)
