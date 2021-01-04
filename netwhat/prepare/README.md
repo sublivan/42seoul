@@ -1,7 +1,7 @@
 # NetWhat 준비
 
 ## IP
-> IP(Internet Protocol)는 인터넷상에 있는 개별 네트워크끼리 패킷을 라우팅하는 프로토콜이다.  
+> IP(Internet Protocol)는 인터넷상에 있는 개별 네트워크끼리 패킷을 라우팅하는 프로토콜이다.
    이 프로토콜을 이용하여 다른 네트워크에 있는 컴퓨터와 통신할 수 있다. Layer 3 network 레이어의 대표 프로토콜이다.
  * 호스트(컴퓨터)에서 호스트까지의 통신을 책임진다. Process data unit은 패킷(packet)이다.
 
@@ -332,7 +332,7 @@ User Datagram Protocol
   * 정확도나 보안을 포기하는 대신 속도가 굉장히 빠르다고 볼 수 있다.
 
 #### 사용)
-   * DNS, IPTV, VoIP, 온라인게임 등
+   * DNS, IPTV, VoIP, 온라인게임, DHCP 등
 
 #### 특징)
    * 비연결 프로토콜
@@ -366,8 +366,8 @@ UDP는 TCP와 달리 연결 설정이 없으며, 혼잡제어를 하지 않기 �
 
 </br>
 
-#### 참고)  
-[TCP와 UDP의 특징과 차이](https://mangkyu.tistory.com/15)  
+#### 참고)
+[TCP와 UDP의 특징과 차이](https://mangkyu.tistory.com/15)
 [TCP와 UDP 비교 정리](https://swalloow.tistory.com/77)
 
 <br/>
