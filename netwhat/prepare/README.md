@@ -297,8 +297,8 @@ IPv4 에는 총 5가지 클래스가 있다. A, B, C, D, E
 <br/>
 
 ---
+## TCP와 UDP
 
-## TCP가 무엇인지
 
 ### TCP
 Transmission Control Protocol
@@ -325,10 +325,6 @@ Transmission Control Protocol
 
 <br/>
 
----
-
-## UDP가 무엇인지
-
 ### UDP
 
 User Datagram Protocol
@@ -338,10 +334,10 @@ User Datagram Protocol
 
 <br/>
 
-### 사용)
+#### 사용)
    * DNS, IPTV, VoIP, 온라인게임 등
 
-### 특징)
+#### 특징)
    * 비연결 프로토콜
    * 연결이 불필요하기에 일 대 다 전송 가능
    * 패킷은 모두 독립적. 순서는 따로 기억하지 않음
@@ -354,6 +350,7 @@ User Datagram Protocol
    * 하나의 에러 체크 시스템만을 보유
    * 브로드캐스팅 가능
 
+</br>
 
 ### 비교)
 
@@ -364,6 +361,17 @@ User Datagram Protocol
 | 브로드캐스팅 불가능   |  브로드케스팅 가능  |
 | 수신확인 가능   | 수신확인 불가능    |
 | 정렬을 위해 순서 재조립   | 순서예측 불가  |
+
+
+#### UPP가 TCP보다 빠른 이유
+
+UDP는 TCP와 달리 연결 설정이 없으며, 혼잡제어를 하지 않기 때문에 TCP보다 빠르다.
+
+</br>
+
+#### 참고)  
+[TCP와 UDP의 특징과 차이](https://mangkyu.tistory.com/15)
+[TCP와 UDP 비교 정리](https://swalloow.tistory.com/77)
 
 <br/>
 
