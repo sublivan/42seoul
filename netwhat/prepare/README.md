@@ -618,3 +618,5 @@ ftp://000.000.000.000:21
 ### [ip주소 계산기]
 
 [ip-calc](http://www.ip-calc.com/)
+
+[IP Calculator](http://jodies.de/ipcalc?host=255.255.128.12&mask1=16&mask2=) (추천)
