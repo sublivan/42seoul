@@ -618,9 +618,7 @@ ftp://000.000.000.000:21
 
 ### [예상문제]
 
-[바로 가기](https://velog.io/@hidaehyunlee/Netwhat-%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C-%EC%A0%95%EB%A6%AC)
-
-[바로 가기2](https://github.com/365kim/42_cursus/tree/master/2_netwhat)
+[예상문제 ](https://github.com/meeansub/42seoul/blob/master/netwhat/prepare/PRACTICE_QUIZ.md)
 
 ### [ip주소 계산기]
 
