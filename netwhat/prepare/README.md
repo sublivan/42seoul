@@ -367,7 +367,7 @@ UDP는 TCP와 달리 연결 설정이 없으며, 혼잡제어를 하지 않기 �
 </br>
 
 #### 참고)  
-[TCP와 UDP의 특징과 차이](https://mangkyu.tistory.com/15)
+[TCP와 UDP의 특징과 차이](https://mangkyu.tistory.com/15)  
 [TCP와 UDP 비교 정리](https://swalloow.tistory.com/77)
 
 <br/>
