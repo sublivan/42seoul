@@ -1,7 +1,7 @@
 # NetWhat 준비
 
 ## IP
- * IP(Internet Protocol)는 인터넷상에 있는 개별 네트워크끼리 패킷을 라우팅하는 프로토콜이다.
+> IP(Internet Protocol)는 인터넷상에 있는 개별 네트워크끼리 패킷을 라우팅하는 프로토콜이다.  
    이 프로토콜을 이용하여 다른 네트워크에 있는 컴퓨터와 통신할 수 있다. Layer 3 network 레이어의 대표 프로토콜이다.
  * 호스트(컴퓨터)에서 호스트까지의 통신을 책임진다. Process data unit은 패킷(packet)이다.
 
