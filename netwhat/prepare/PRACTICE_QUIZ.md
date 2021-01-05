@@ -431,7 +431,7 @@ UDP는 broadcasting을 지원합니다
 
 **UDP 사용 서비스**
 
-DHCH, DNS, VoIP, IPTV, 온라인게임
+DHCP, DNS, VoIP, IPTV, 온라인게임
 
 </br>
 
