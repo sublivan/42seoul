@@ -8,7 +8,7 @@
 
 [Host address](#Host-address)
 
-[Public / Private IP address (공인/사설 IP 주소)](#Public-/-Private-IP-address)
+[Public / Private IP address](#Public/Private-IP-address)
 
 [OSI Model](#OSI-Model)
 
