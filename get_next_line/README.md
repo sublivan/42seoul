@@ -11,7 +11,7 @@ int get_next_line(int fd, char **line);
 
 ## 과제 준비
 
-[PREPARE](https://github.com/meeansub/42seoul/blob/master/born2code/get_next_line/PREPARE.md)
+[PREPARE](https://github.com/meeansub/42seoul/tree/master/get_next_line/PREPARE)
 
 </br>
 
