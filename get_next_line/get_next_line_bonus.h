@@ -7,11 +7,11 @@
 # include <limits.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 5000
+#  define BUFFER_SIZE 32
 # endif
 
 # ifndef OPEN_MAX
-#  define OPEN_MAX 32
+#  define OPEN_MAX 1024
 # endif
 
 int		get_next_line(int fd, char **line);

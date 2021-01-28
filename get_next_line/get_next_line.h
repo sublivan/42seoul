@@ -7,15 +7,14 @@
 # include <limits.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 5000
+#  define BUFFER_SIZE 32
 # endif
 
 # ifndef OPEN_MAX
-#  define OPEN_MAX 32
+#  define OPEN_MAX 1024
 # endif
 
 int		get_next_line(int fd, char **line);
-
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);

@@ -4,7 +4,7 @@ int	return_line(char **backup, char **line, char *newline_ptr)
 {
 	char	*temp;
 
-	if (newline_ptr)
+	if (newline_ptr != 0)
 	{
 		newline_ptr[0] = '\0';
 		*line = ft_strdup(*backup);
