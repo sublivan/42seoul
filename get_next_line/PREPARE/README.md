@@ -17,11 +17,16 @@ fd는 파일디스크립터의 약자이다.
 open 함수를 통해 새 스트림을 열어주면 운영체제는 자동으로 기존에 사용하던 스트림 번호에 +1을 하여 이를 해당 스트림의 fd로 부여한다.
 
 **[참고]**
+
+**OPEN_MAX**
+
 파일 디스크립터의 최대갓은 OPEN_MAX라는 값이다.
 
 OPEN_MAX는 단일 프로그램에 허용되는 최대 열린 파일 수를 정의하는 상수다.
 
 즉, 하나의 프로세스 당 최대 OPEN_MAX개의 파일을 열 수 있다.
+
+</br>
 
 OPEN_MAX 값은 플랫폼에 따라 다르다.
 
@@ -29,9 +34,9 @@ Unix 시스템에서 C언어의 OPEN_MAX는 limits.h에 정의되어 있다.
 
 (OPEN_MAX와 FOPEN_MAX와 _SC_OPEN_MAX는 조금씩 다르다고 한다. ([출처](https://www.javaer101.com/article/2890626.html)))
 
-OPEN_MAX 알아보기
+
 ```
-/* 터미널에서 */
+/*OPEN_MAX 알아보기 터미널*/
 
 getconf OPEN_MAX
 
@@ -39,8 +44,7 @@ getconf OPEN_MAX
 //1024
 ```
 
-
-
+</br>
 
 ### line
 line은 함수의 매개변수로 들어가는 포인터이다.
