@@ -54,7 +54,7 @@ get_next_line_bonus.h
     - char buf[BUFFER_SIZE + 1];
 
 2. read한 버퍼를 백업할 static 버퍼를 만든다.
-    - static char *backup
+    - static char *backup[OPEN_MAX];
 
 3. read(fd, buf, BUFFER_SIZE);를 해서 라인을 읽은 다음,
 
@@ -62,7 +62,7 @@ get_next_line_bonus.h
 
 5. backup 안에 개행문자가 있는지 없는지 검사한다.
 
-6. 개행문자가 있으면 다음 단계로 넘어가고, 없다면 개행 문자가 있을 때 까지 3번으로 돌아가 파일을 계속 읽으면서
+6. 개행문자가 있으면 다음 단계로 넘어가고, 없다면 개행 문자가 있을 때 까지 3번으로 돌아가 파일을 계속 읽으면서  
   6_1. 기존에 백업한 것과 계속 합쳐나간다.
     - ft_strjoin(backip[fd], buf)
 
