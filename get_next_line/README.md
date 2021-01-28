@@ -53,6 +53,11 @@ get_next_line_bonus.h
 7. 개행문자가 있는 backup을 개행문자 전과 후로 잘라서, \n 전까지는 line 에다가 주고 \n 후는 다시 static 변수 backup에 백업한다.
     - return_line
 
+**[참고]**
+
+**buffer**
+버퍼는 데이터를한곳에서 다른 한 곳으로 전송하는 동안 일시적으로 그 데이터를 보관하는 메모리 영역
+
 </br>
 
 ---
