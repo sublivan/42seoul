@@ -1,82 +1,3 @@
-# Get Next Line
-
-파일 디스크립터로부터 읽혀진, newline으로 끝나는 라인을
-반환하는 함수를 코드화 하는 것입니다.
-
-```
-int get_next_line(int fd, char **line);
-```
-
-</br>
-
-
-### gnl 기본로직
-
-1. 파일을 연다.
-2. BUFFER_SIZE만큼 읽어 버퍼에 저장한다.
-3. 버퍼에서 개행문자를 찾는다
-4. 개행문자를 찾았다면 처음부터 개행문자까지 리턴.
-5. 개행문자를 못찾았거나, 버퍼에 데이터가 남아있다면 저장 해둔다.
-6. 파일을 다 읽을때까지 2번 부터 5번까지 반복
-7. 파일을 다 읽었다면 남은 저장된 데이터가 없어질때 까지 3 ~ 5 반복
-8. 종료
-
-
-</br>
-
-
-## 과제 준비
-
-[PREPARE](https://github.com/meeansub/42seoul/tree/master/get_next_line/PREPARE)
-
-</br>
-
-## 구현 목록
-
-get_next_line.c
-
-get_next_line.utils.c
-
-get_next_line.h
-
-get_next_line_bonus.c
-
-get_next_line_utils_bonus.c
-
-get_next_line_bonus.h
-
-</br>
-
-## get_next_line 로직
-
-
-1. 파일을 read 할 임시 버퍼를 만든다.
-    - char buf[BUFFER_SIZE + 1];
-
-2. read한 버퍼를 백업할 static 버퍼를 만든다.
-    - static char *backup[OPEN_MAX];
-
-3. read(fd, buf, BUFFER_SIZE);를 해서 라인을 읽은 다음,
-
-4. buf를 static 변수 backup에 백업한다.
-
-5. backup 안에 개행문자가 있는지 없는지 검사한다.
-
-6. 개행문자가 있으면 다음 단계로 넘어가고, 없다면 개행 문자가 있을 때 까지 3번으로 돌아가 파일을 계속 읽으면서  
-  6_1. 기존에 백업한 것과 계속 합쳐나간다.
-    - ft_strjoin(backip[fd], buf)
-
-7. 개행문자가 있는 backup을 개행문자 전과 후로 잘라서, \n 전까지는 line 에다가 주고 \n 후는 다시 static 변수 backup에 백업한다.
-    - return_line
-
-**[참고]**
-
-**buffer**
-버퍼는 데이터를한곳에서 다른 한 곳으로 전송하는 동안 일시적으로 그 데이터를 보관하는 메모리 영역
-
-</br>
-
-
 # Subject
 
 <details>
@@ -205,3 +126,113 @@ get_next_line 프로젝트는 간단해서 보너스를 받기 위해 할 수 �
 * get_next_line을 사용하여 다중 파일 디스크립터를 관리 할 수 있는 것. 예를 들어, 파일 디스크립터 3, 4, 5가 읽을 수 있는 경우, get_next_line은 3에서 한 번, 4에서 한 번, 다시 3에서 한 번, 5에서 한 번 호출할 수 있습니다. 각 디스크립터의 리딩 쓰레드를 잃지 않고..
 
 </details>
+
+# Get Next Line
+
+파일 디스크립터로부터 읽혀진, newline으로 끝나는 라인을
+반환하는 함수를 코드화 하는 것입니다.
+
+```
+int get_next_line(int fd, char **line);
+```
+
+</br>
+
+
+### gnl 기본로직
+
+1. 파일을 연다.
+2. BUFFER_SIZE만큼 읽어 버퍼에 저장한다.
+3. 버퍼에서 개행문자를 찾는다
+4. 개행문자를 찾았다면 처음부터 개행문자까지 리턴.
+5. 개행문자를 못찾았거나, 버퍼에 데이터가 남아있다면 저장 해둔다.
+6. 파일을 다 읽을때까지 2번 부터 5번까지 반복
+7. 파일을 다 읽었다면 남은 저장된 데이터가 없어질때 까지 3 ~ 5 반복
+8. 종료
+
+
+</br>
+
+
+## 과제 준비
+
+[PREPARE](https://github.com/meeansub/42seoul/tree/master/get_next_line/PREPARE)
+
+</br>
+
+## 구현 목록
+
+get_next_line.c
+
+get_next_line.utils.c
+
+get_next_line.h
+
+get_next_line_bonus.c
+
+get_next_line_utils_bonus.c
+
+get_next_line_bonus.h
+
+</br>
+
+## get_next_line 로직
+
+
+1. 파일을 read 할 임시 버퍼를 만든다.
+    - char buf[BUFFER_SIZE + 1];
+
+2. read한 버퍼를 백업할 static 버퍼를 만든다.
+    - static char *backup[OPEN_MAX];
+
+3. read(fd, buf, BUFFER_SIZE);를 해서 라인을 읽은 다음,
+
+4. buf를 static 변수 backup에 백업한다.
+
+5. backup 안에 개행문자가 있는지 없는지 검사한다.
+
+6. 개행문자가 있으면 다음 단계로 넘어가고, 없다면 개행 문자가 있을 때 까지 3번으로 돌아가 파일을 계속 읽으면서  
+  6_1. 기존에 백업한 것과 계속 합쳐나간다.
+    - ft_strjoin(backip[fd], buf)
+
+7. 개행문자가 있는 backup을 개행문자 전과 후로 잘라서, \n 전까지는 line 에다가 주고 \n 후는 다시 static 변수 backup에 백업한다.
+    - return_line
+
+**[참고]**
+
+**buffer**
+버퍼는 데이터를한곳에서 다른 한 곳으로 전송하는 동안 일시적으로 그 데이터를 보관하는 메모리 영역
+
+</br>
+
+eof - 파일끝
+
+
+개행검사 - 최대한 read 함수 적게 쓰기위해
+
+
+왜 전역변수 사용?
+- 전역변수는 프로그램이 끝날때까지 메모리에 존재하기때문에, 파일에 대한 처리가끝날때까지 사라지면 안되기때문에 사용
+
+
+메모리 할당이 많은데 왜 null 체크 처리 안했나
+- 할당이 실패하는 경우가 많이 없어서
+
+
+*backup[OPEN_MAX], 왜 이차원배열로했나
+- 다른 파일디스크립터에 대한 명령을 처리하기 위해서
+
+
+```c
+while ((newline_ptr = ft_strchr(backup[fd], '\n') == 0) // 개행 검사
+	&& (read_size = read(fd, buf, BUFFER_SIZE)) > 0) // 파일을 완전히 읽는 과정
+{
+	buf[read_size] = '\0';
+	backup[fd] = ft_strjoin(backup[fd], buf);
+}
+if (read_size < 0) // 읽는 과정에서 오류 발생했을때 검출
+{
+	return (-1);
+}
+```
+
