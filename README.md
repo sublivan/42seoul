@@ -1,6 +1,6 @@
 # 42서울 본 과정 - born2code
 
-기간 : 9 월 28 ~ 진행중
+기간 : 2020.09 ~ 2021.04
 
 # contents
 
@@ -13,5 +13,3 @@
 
 ### Netwhat
 [Netwhat](https://github.com/meeansub/42seoul/tree/master/netwhat)
-
-### ft_printf
